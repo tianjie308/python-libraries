@@ -1,0 +1,30 @@
+'''
+This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.
+sys模块提供一些由解释器使用或保存的变量，提供一些与解释器关系密切的函数
+'''
+
+sys.argv
+The list of command line arguments passed to a python script.
+用于储存通过命令行传递给python脚本的参数，数据类型为列表。
+
+sys.path
+A list of strings that specifies the search path for modules. Initialized from the environment variable PYTHONPATH, plus an installation-dependent default.
+模块查找路径的详细说明，数据类型为列表，列表成员的数据类型为字符串。由环境变量PYTHONPATH进行初始化，外加安装默认路径。
+
+sys.builtin_module_names
+A tuple of strings giving the names of all modules that are compiled into this python interpreter.
+
+sys.modules
+A dictionary that maps module names to modules which have already been loaded.
+
+sys.exit([arg])
+Exit from python. The optional argument 'arg' can be an integer giving the exit status(defaulting to zero), or another type of object.
+
+sys.stdin
+sys.stdout
+sys.stderr
+File objects used by the interpreter for standard input, output and errors:
+  'stdin' is used for all interactive input (including calls to 'input()');
+  'stdout' is used for the output of 'print()' and expression statements and for the prompt of 'input()';
+  The interpreter's own prompts and its error messages go to 'stderr'.
+

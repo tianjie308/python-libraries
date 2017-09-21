@@ -72,66 +72,87 @@ os.errno
 Module 'errno'. This module makes available standard errno system symbols.
 
 os.error
+Class type. Base class for I/O related errors. An alias for the built-in 'OSError' exception.
 
-os.execl
-
-os.execle
-
-os.execlp
-
-os.execlpe
-
-os.execv
-
-os.execve
-
-os.execvp
-
-os.execvpe
+os.execl(path, arg0, arg1, ...)
+os.execle(path, arg0, arg1, ..., env)
+os.execlp(file, arg0, arg1, ...)
+os.execlpe(file, arg0, arg1, ..., env)
+os.execv(path, args)
+os.execve(path, args, env)
+os.execvp(file, args)
+os.execvpe(file, args, env)
+Function type. These functions all execute a new program, replacing the current process; they do not return.
 
 os.extsep
+Str type. The character which separates the base filename from the extension; for example, the '.' in os.py.
 
-os.fdopen
+os.fdopen(fd, *args, **kwargs)
+Function type. Return an open file object connected to the file descriptor 'fd'. This is an alias of the 'open()' built-in function
+and accepts the same arguments.The only difference is that the first argument of 'fdopen()' must always be an integer.
 
-os.fsdecode
+os.fsdecode(filename)
+Function type. Decode the path-like 'filename' from the filesystem. Return 'str' unchanged.
 
-os.fsencode
+os.fsencode(filename)
+Function type. Encode path-like 'filename' to the filesystem. Return 'bytes' unchanged.
 
-os.fspath
+os.fspath(path)
+Function type. Return the file system representation of the 'path'.
 
-os.fstat
+os.fstat(fd)
+Function type. Get the status of the file descriptor 'fd'. Return a 'stat-result' object.
 
-os.fsync
+os.fsync(fd)
+Function type. Force write of file with file descriptor 'fd' to disk.
 
-os.ftruncate
+os.ftruncate(fd, length)
+Function type. Truncate the file corresponding to file descriptor 'fd', so that it is at most 'length' bytes in size.
 
-os.get_exec_path
+os.get_exec_path(env=None)
+Function type. Returns the list of directories that will be searched for a named executable, similar to a shell, when launching a 
+process. 'env', when specified, should be an environment varable dictionary to lookup the 'PATH' in.
 
-os.get_handle_inheritable
+os.get_handle_inheritable(handle)
+Function type. Get the close-on-exe flag of the specified file descriptor.
 
-os.get_inheritable
+os.get_inheritable(fd)
+Function type. Get the close-on-exe flag of the specified file descriptor.
 
-os.get_terminal_size
+os.get_terminal_size(fd=STDOUT_FILENO)
+Function type. Return the size of the terminal window as (columns, lines), tuple of type 'terminal_size'.
 
-os.getcwd
+os.getcwd()
+Function type. Return a unicode string representing the current working directory.
 
-os.getcwdb
+os.getcwdb()
+Function type. Return a bytes string representing the current working directory.
 
-os.getenv
+os.getenv(key, default=None)
+Function type. Return the value of the environment variable 'key' if it exists, or default if it doesn't. 'key', 'default' and the
+result are 'str'.
 
-os.getlogin
+os.getlogin()
+Function type. Return the name of the user logged in on the controlling terminal of the process.
 
-os.getpid
+os.getpid()
+Function type. Return the current process id.
 
 os.getppid
+Function type. Return the parent's process id.
 
-os.isatty
+os.isatty(fd)
+Function type. Return 'True' if the file descriptor 'fd' is open and connected to a tty(-like) device, else 'False'.
+Return 'True' if the file descriptor is an open file descriptor connected to the slave end of a terminal.
 
-os.kill
+os.kill(pid, sig)
+Function type. Kill a process with a signal. Send signal 'sig' to the process 'pid'.
 
 os.linesep
+Str type. The string used to separate (or, rather, terminate) lines on the current platform.
 
-os.link
+os.link(src, dst, *, src_dir_fd=None, dst_dir_fd=None, follow_symlinks=True)
+Function type. Create a hard link pointing to 'src' named 'dst'.
 
 os.listdir
 

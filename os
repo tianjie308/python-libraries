@@ -18,40 +18,58 @@ These functions are decribed in Files and Directories.
 os.MutableMapping
 
 os.PathLike
+Class type. Abstract base class for implementing the file system path protocol. An abstract base class for objects representing a file system path, e.g. pathlib.PurePath.
 
 os.abc
+Module 'abc'. Abstract Base Classes (ABCs) according to PEP 3119.
 
 os.abort
+Function type. Abort the interpreter immediately. Generate a 'SIGABRT' signal to the current process.
 
 os.access
+Function type. Use the real uid/gid to test for access to a path.
 
 os.altsep
+Str type. An alternative character used by the operating system to separate pathname components.
 
-os.chdir
+os.chdir(path)
+Function type. Change the current working directory to the specified path. Change the current working directory to 'path'.
 
-os.chmod
+os.chmod(path, mode, *, dir_fd=None, follow_symlinks=True)
+Function type. Change the access permissions of a file.
 
-os.close
+os.close(fd)
+Function type. Close file descriptor 'fd'.
 
-os.closerange
+os.closerange(fd_low, fd_high)
+Function type. Closes all file descriptors in [fd_low, fd_high], ignoring errors.
 
-os.cpu_count
+os.cpu_count()
+Function type. Return the number of CPUs in the system; return None if indeterminable.
 
 os.curdir
+Str type. The constant string used by the operating system to refer to the current directory.
 
 os.defpath
+Str type. The default search path used by 'exec*p*' and 'spawn*p*' if the environment doesn't have a 'PATH' key. Also available via 'os.path'.
 
-os.device_encoding
+os.device_encoding(fd)
+Function type. Return a string describing the encoding of the device associated with 'fd' if it is connected to a terminal; else return None.
 
 os.devnull
+Str type. The file path of the null device.
 
-os.dup
+os.dup(fd)
+Function type. Return a duplicate of file descriptor 'fd'. The new file descriptor is non-inheritable.
 
-os.dup2
+os.dup2(fd, fd2, inheritable=True)
+Function type. Duplicate file descriptor 'fd' to 'fd2', closing the latter first inf necessary.
 
 os.environ
+Class type, a mapping. A mapping object representing the string environment.
 
 os.errno
+Module 'errno'. This module makes available standard errno system symbols.
 
 os.error
 

@@ -15,13 +15,8 @@ os.fchdir(fd)
 os.getcwd()
 These functions are decribed in Files and Directories.
 
-os.MutableMapping
-
 os.PathLike
 Class type. Abstract base class for implementing the file system path protocol. An abstract base class for objects representing a file system path, e.g. pathlib.PurePath.
-
-os.abc
-Module 'abc'. Abstract Base Classes (ABCs) according to PEP 3119.
 
 os.abort
 Function type. Abort the interpreter immediately. Generate a 'SIGABRT' signal to the current process.
@@ -68,9 +63,6 @@ Function type. Duplicate file descriptor 'fd' to 'fd2', closing the latter first
 os.environ
 Class type, a mapping. A mapping object representing the string environment.
 
-os.errno
-Module 'errno'. This module makes available standard errno system symbols.
-
 os.error
 Class type. Base class for I/O related errors. An alias for the built-in 'OSError' exception.
 
@@ -90,6 +82,13 @@ Str type. The character which separates the base filename from the extension; fo
 os.fdopen(fd, *args, **kwargs)
 Function type. Return an open file object connected to the file descriptor 'fd'. This is an alias of the 'open()' built-in function
 and accepts the same arguments.The only difference is that the first argument of 'fdopen()' must always be an integer.
+```
+def fdopen(fd, *args, **kwargs):
+  if not isinstance(fd, int):
+    raise TypeError('invalid fd type (%s, expected integer)' %type(fd)
+  import io
+  return io.open(fd, *args, **kwargs)
+```os.
 
 os.fsdecode(filename)
 Function type. Decode the path-like 'filename' from the filesystem. Return 'str' unchanged.
